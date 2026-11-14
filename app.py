@@ -8,7 +8,7 @@ from email.message import EmailMessage
 from flask import Flask, render_template, request
 from werkzeug.middleware.proxy_fix import ProxyFix
 
-app = Flask(__name__)
+app = Flask(__name__, template_folder="template")
 
 # Configure these values in your hosting provider's Environment settings.
 SMTP_HOST = os.environ.get("SMTP_HOST", "smtp.gmail.com")
